@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcIF</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <script defer src="./src/js/calculos.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <center>
+            <h1>CalcIF</h1>
+            <select name="opçoes" id="opcoes">
+                <option onclick="selecaoSelect()" value="b">Media Bimestral</option>
+                <option onclick="selecaoSelect()" value="g">Media Geral</option>
+                <!-- <option onclick="selecaoSelect()" value="r">Recuperação</option> -->
+            </select>
+
+            <section class="bimes" id="b">
+
+                <select name="cal" id="calculo">
+                    <option onclick="selecaoTipo()" value="pon">Calculo Ponderado</option>
+                    <option onclick="selecaoTipo()" value="ari">Calculo Aritimético</option>
+                </select>
+
+                <div class="divBimes" id="pon">
+                    <ul id="ul-pon">
+                        <li><input type="number" id="BPnota1" class="coisa"  placeholder=" 1° Nota "> <input type="number" class="part"
+                                placeholder="vale?"></li>
+
+                    </ul>
+
+                    <div class="bts">
+                        <p class="botaoMa" onclick="AddInput('pon')">+</p>
+                        <p class="botaoMe" onclick="DelInput('pon')">-</p>
+                    </div>
+
+
+                    <p class="calcularButt" onclick="calcular('P')" > Calcular </p>
+
+                    <p id="resultP"> </p>
+
+                </div>
+
+
+                <div class="divBimes" id="ari">
+                    <ul id="ul-ari">
+                        <li><input type="number" id="BAnota1" placeholder=" 1° Nota "></li>
+                    </ul>
+                    <div class="bts">
+                        <p class="botaoMa" onclick="AddInput('ari')">+</p>
+                        <p class="botaoMe" onclick="DelInput('ari')">-</p>
+                    </div>
+                    <p class="calcularButt" onclick="calcular('A')"> Calcular </p>
+
+                    <p id="resultA"> </p>
+                </div>
+
+            </section>
+
+
+            <section id="g">
+
+                <p class="botaoFalso" onclick="AbrirNota2b()">
+                    Quanto eu preciso no 2 bimestre?
+                </p>
+
+                <div id="nota2b">
+                    <label style=" color: rgb(61, 107, 0);"> 1 Bimestre
+                        <input type="number" id="GRnota" placeholder="1° bimestre">
+                    </label>
+                    
+                    <p  style="margin: 20px;" class="calcularButt" onclick="calcularGe('B2')" > Calcular </p>
+
+                    <p id="resultGR"></p>
+                </div>
+
+                <ul>
+                    <li><input type="number" id="Gnota1" placeholder=" 1° Nota "></li>
+                    <li> <input type="number" id="Gnota2" placeholder=" 2° Nota "></li>
+                </ul>
+
+
+
+                <!-- se não preencher o segundo input ele vai mostrar o 
+             necessario para passar de ano -->
+
+                <p class="int" onclick="AbrirIntegrado()">Sou do integrado</p>
+
+                <div class="divBimes" id="divGeral">
+                    <ul>
+                        <li><input type="number" id="Gnota3" placeholder=" 3° Nota "></li>
+                        <li><input type="number" id="Gnota4" placeholder=" 4° Nota "></li>
+                    </ul>
+
+
+                </div>
+
+
+                <p  style="margin: 20px;" class="calcularButt" onclick="calcularGe('G')" > Calcular </p>
+
+
+                <p id="resultG"></p>
+
+
+
+            </section>
+
+
+
+
+
+        </center>
+    </main>
+    <script defer src="./src/js/muda.js"></script>
+
+</body>
+
+</html>

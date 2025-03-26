@@ -1,0 +1,163 @@
+:root {
+    --colorVerde: rgb(53, 228, 0);
+    --colorRed: rgb(231, 85, 85);
+    --coloryelon: rgb(187, 147, 17);
+}
+
+main {
+    margin: 5vw;
+    border-radius: 5vw;
+    border: 1px solid var(--colorVerde);
+    height: 90vh;
+}
+
+h1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: var(--colorVerde);
+}
+
+#opcoes,
+#calculo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid var(--colorVerde);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+input {
+    margin: 5px;
+    width: 150px;
+    
+}
+
+.part {
+    width: 100px;
+}
+
+.bts {
+    display: flex;
+    margin: 3vh 0 3vh 40vw;
+}
+
+.botaoMa {
+    background-color: rgba(200, 255, 186, 0.219);
+    color: rgb(17, 85, 0);
+    border: 1px solid var(--colorVerde);
+}
+
+.botaoMe {
+    background-color: rgba(255, 172, 234, 0.185);
+    color: rgb(73, 0, 55);
+    border: 1px solid rgb(255, 172, 234);
+}
+
+.botaoMa,
+.botaoMe {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+
+#g ul,
+.divBimes ul {
+    margin: 10px;
+}
+
+.botaoFalso {
+    cursor: pointer;
+    background-color: rgb(200, 255, 186);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    display: inline-block;
+    animation: piscar 1.5s infinite ease-in-out;
+    /* Faz o botão "piscar" */
+}
+
+/* .botaoFalso:hover {
+    background-color: rgb(151, 194, 140) ;
+    cursor: pointer;
+    
+} */
+
+.botaoFalso:active {
+    background-color: rgb(151, 194, 140);
+}
+
+@keyframes piscar {
+    0% {
+        background-color: rgb(200, 255, 186);
+    }
+
+    50% {
+        background-color: rgb(153, 253, 153);
+    }
+
+    100% {
+        background-color: rgb(200, 255, 186);
+    }
+}
+
+section,
+.divBimes,
+#nota2b {
+    display: none;
+}
+
+
+#nota2b {
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 1;
+    background-color: rgba(75, 73, 73, 0.096);
+    height: 30vh;
+    width: 60vw;
+    border: green 1px double;
+    backdrop-filter: blur(2.5px);
+    border-radius: 2vw;
+}
+
+#resultP, #resultA, #resultGR, #resultG{
+    opacity: 0;
+    font-size: 3vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+@media (min-width: 768px) {
+    #resultP, #resultA, #resultGR, #resultG{
+        font-size: 3vh;
+        margin: 5vh;
+    }
+    .botaoFalso {
+        
+        animation: none;
+    }
+    
+    .botaoFalso:hover {
+        background-color: rgb(133, 170, 124) ;
+        cursor: pointer;
+        
+    }
+    .int, .calcularButt, select:hover{
+        cursor: pointer;
+    }
+
+    main {
+        margin: 5vw 25vw 5vw 25vw;
+        min-height: 80vh; /* Tamanho mínimo de 80% da altura da tela */
+        height: auto;
+    }
+    .bts {
+        margin: 3vh 0 3vh 22.5vw;
+    }
+    
+}
