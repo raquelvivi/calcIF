@@ -159,5 +159,9 @@ section,
     .bts {
         margin: 3vh 0 3vh 22.5vw;
     }
+    #nota2b {
+        margin-left: 10vw;
+        width: 30vw;
+    }
     
 }
