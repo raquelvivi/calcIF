@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/css/style.css">
 
     <script defer src="./src/js/calculos.js"></script>
+    <script defer src="./src/js/muda.js"></script>
 
 </head>
 
@@ -16,17 +17,17 @@
     <main>
         <center>
             <h1>CalcIF</h1>
-            <select name="opçoes" id="opcoes">
-                <option onclick="selecaoSelect()" value="b">Media Bimestral</option>
-                <option onclick="selecaoSelect()" value="g">Media Geral</option>
-                <!-- <option onclick="selecaoSelect()" value="r">Recuperação</option> -->
+            <select name="opçoes" id="opcoes" onchange="selecaoSelect()">
+                <option  value="b">Media Bimestral</option>
+                <option  value="g">Media Geral</option>
+                <!-- <option onchange="selecaoSelect()" value="r">Recuperação</option> -->
             </select>
 
             <section class="bimes" id="b">
 
-                <select name="cal" id="calculo">
-                    <option onclick="selecaoTipo()" value="pon">Calculo Ponderado</option>
-                    <option onclick="selecaoTipo()" value="ari">Calculo Aritimético</option>
+                <select name="cal" id="calculo" onchange="selecaoTipo()" >
+                    <option value="pon">Calculo Ponderado</option>
+                    <option value="ari">Calculo Aritimético</option>
                 </select>
 
                 <div class="divBimes" id="pon">
@@ -118,7 +119,8 @@
 
         </center>
     </main>
-    <script defer src="./src/js/muda.js"></script>
+
+    
 
 </body>
 
